@@ -51,7 +51,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./iac/main.bicep
-        parameters: appName=basic-asp-site
+        parameters: appName=basic-app-insights
     
     - name: appId
       run: echo ${{ steps.deploy.outputs.appId }}
