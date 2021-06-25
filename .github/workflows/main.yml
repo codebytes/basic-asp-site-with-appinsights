@@ -52,12 +52,7 @@ jobs:
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./iac/main.bicep
         parameters: appName=${{ secrets.AZURE_APP_NAME }}
-    
-    - name: appId
-      run: echo ${{ steps.deploy.outputs.appId }}
-    - name: appinsights
-      run: echo ${{ steps.deploy.outputs.APPINSIGHTS_INSTRUMENTATIONKEY }}
-    
+
     - name: Download App
       uses: actions/download-artifact@v2
       with:
